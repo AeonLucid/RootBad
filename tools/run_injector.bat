@@ -1,6 +1,6 @@
 @echo off
 
-adb push ..\src\app\RootBad\.externalNativeBuild\cmake\debug\arm64-v8a\injector /data/local/tmp/rootbad_injector
+adb push ..\src\RootBad\.externalNativeBuild\cmake\debug\arm64-v8a\injector /data/local/tmp/rootbad_injector
 adb shell chmod 555 /data/local/tmp/rootbad_injector
 
 cls

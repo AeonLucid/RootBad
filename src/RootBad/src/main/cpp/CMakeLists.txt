@@ -15,7 +15,8 @@ add_library(
 
 add_executable(
         injector
-        injector/injector.cpp
+        injector/daemon.c
+        injector/injector.c
 )
 
 find_library(
