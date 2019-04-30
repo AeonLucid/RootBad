@@ -10,7 +10,12 @@ add_library(
         intruder
         SHARED
         intruder/intruder.cpp
-        ${CMAKE_SOURCE_DIR}/../../../../../../libs/frida-gumjs/${ANDROID_ABI}/frida-gumjs.h
+        ${CMAKE_SOURCE_DIR}/../../../../../libs/frida-gumjs/${ANDROID_ABI}/frida-gumjs.h
+)
+
+add_executable(
+        injector
+        injector/injector.cpp
 )
 
 find_library(
@@ -26,10 +31,10 @@ target_link_libraries(
 target_include_directories(
         intruder
         PRIVATE
-        ${CMAKE_SOURCE_DIR}/../../../../../../libs/frida-gumjs/${ANDROID_ABI}
+        ${CMAKE_SOURCE_DIR}/../../../../../libs/frida-gumjs/${ANDROID_ABI}
 )
 
 target_link_libraries(
         intruder
-        ${CMAKE_SOURCE_DIR}/../../../../../../libs/frida-gumjs/${ANDROID_ABI}/libfrida-gumjs.a
+        ${CMAKE_SOURCE_DIR}/../../../../../libs/frida-gumjs/${ANDROID_ABI}/libfrida-gumjs.a
 )
